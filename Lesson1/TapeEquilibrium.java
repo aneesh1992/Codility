@@ -83,11 +83,8 @@ class Solution {
             sum += A[i];
         }
         
-        //P[N]is thje leftSum, P[1] = A[0]; P[2] = A[0] + A[1],P[0] is useless
-        int [] P = new int[A.length];      
-        for (int i=0; i<P.length;i++) {
-            P[i] = 0;            
-        }
+        //P[N]is the leftSum, P[1] = A[0]; P[2] = A[0] + A[1],P[0] is useless
+        int [] P = new int[A.length]; 
 
         for (int i=1; i<A.length;i++) {
             P[i] = A[i-1] + P[i-1];            
